@@ -1,4 +1,4 @@
-% --- Source file: qqvg.Rd ---
+% --- Source file: vgPlots.Rd ---
 \name{VarianceGammaPlots}
 \alias{qqvg}
 \alias{ppvg}
@@ -17,12 +17,12 @@
 
 \usage{
 
-  qqvg(y, vgC = 0, sigma = 1, theta = 0, nu = 1,
+  qqvg(y, vgC = NULL, sigma = NULL, theta = NULL, nu = NULL,
     param = c(vgC, sigma, theta, nu), main = "Variance Gamma Q-Q Plot",
     xlab = "Theoretical Quantiles", ylab = "Sample Quantiles",
     plot.it = TRUE, line = TRUE, \dots)
 
-  ppvg(y, vgC = 0, sigma = 1, theta = 0, nu = 1,
+  ppvg(y, vgC = NULL, sigma = NULL, theta = NULL, nu = NULL,
     param = c(vgC, sigma, theta, nu), main = "Variance Gamma P-P Plot",
     xlab = "Uniform Quantiles",
     ylab = "Probability-integral-transformed Data", plot.it = TRUE,
@@ -59,6 +59,7 @@
   \item{x}{The x coordinates of the points that are to be plotted.}
   \item{y}{The y coordinates of the points that are to be plotted.}
 }
+
 \references{
   Wilk, M. B. and Gnanadesikan, R. (1968)
   Probability plotting methods for the analysis of data.
@@ -66,7 +67,8 @@
   \bold{55}, 1--17.
 }
 
-\author{David Scott \email{d.scott@auckland.ac.nz}, Christine Yang Dong}
+\author{David Scott \email{d.scott@auckland.ac.nz}, 
+  Christine Yang Dong \email{c.dong@auckland.ac.nz}}
 
 \seealso{
   \code{\link{ppoints}}, \code{\link{dvg}}.
