@@ -76,10 +76,11 @@
   \item{\dots}{Passes arguments to \code{uniroot}.  See \bold{Details}.}
 }
 
-\details{
-  Users may either specify the values of the parameters individually or as a
-  vector. If both forms are specifed but with different values, then the
-  values specified by vector \code{param} will always overwrite the other ones.
+\details{  
+  Users may either specify the values of the parameters individually or
+  as a vector. If both forms are specifed but with different values,
+  then the values specified by vector \code{param} will always overwrite
+  the other ones.
 
 
   The variance gamma distribution has density
@@ -135,20 +136,20 @@
   parameterisation used above.
 
   \code{pvg} breaks the real line into eight regions in order to
-  determine the integral of \code{dvg}. The break points determining
-  the regions are found by \code{vgBreaks}, based on the values of
+  determine the integral of \code{dvg}. The break points determining the
+  regions are found by \code{vgBreaks}, based on the values of
   \code{small}, \code{tiny}, and \code{deriv}. In the extreme tails of
   the distribution where the probability is \code{tiny} according to
-  \code{vgCalcRange}, the probability is taken to be zero.  In the
-  inner part of the distribution, the range is divided in 6 regions, 3
-  above the mode, and 3 below. On each side of the mode, there are two
-  break points giving the required three regions. The outer break point
-  is where the probability in the tail has the value given by the variable
+  \code{vgCalcRange}, the probability is taken to be zero.  In the inner
+  part of the distribution, the range is divided in 6 regions, 3 above
+  the mode, and 3 below. On each side of the mode, there are two break
+  points giving the required three regions. The outer break point is
+  where the probability in the tail has the value given by the variable
   \code{small}. The inner break point is where the derivative of the
   density function is \code{deriv} times the maximum value of the
   derivative on that side of the mode. In each of the 6 inner regions
   the numerical integration routine
-  \code{\link[HyperbolicDist]{safeIntegrate}} (which is a wrapper for
+  \code{\link[DistributionUtils]{safeIntegrate}} (which is a wrapper for
   \code{\link{integrate}}) is used to integrate the density \code{dvg}.
 
   \code{qvg} uses the breakup of the real line into the same 8
@@ -161,12 +162,13 @@
   \code{pvg} and \code{qvg} may generally be expected to be
   accurate to 5 decimal places.
 
-  The variance gamma distribution is discussed in Kotz \emph{et al} (2001).
-  It can be seen to be the weighted difference of two i.i.d. gamma variables
-  shifted by the value of \eqn{\theta}{theta}. \code{rvg} uses this
-  representation to generate oberservations from the variance gamma
-  distribution.
-  }
+  The variance gamma distribution is discussed in Kotz \emph{et al}
+  (2001).  It can be seen to be the weighted difference of two
+  i.i.d. gamma variables shifted by the value of
+  \eqn{\theta}{theta}. \code{rvg} uses this representation to generate
+  oberservations from the variance gamma distribution.
+
+}
 
   \value{
   \code{dvg} gives the density function, \code{pvg} gives the distribution

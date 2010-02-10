@@ -139,9 +139,9 @@
 
 \seealso{
   \code{\link{optim}}, \code{\link{nlm}}, \code{\link{par}},
-  \code{\link{hist}}, \code{\link[HyperbolicDist]{logHist}},
+  \code{\link{hist}}, \code{\link[DistributionUtils]{logHist}},
   \code{\link{qqvg}}, \code{\link{ppvg}},
-  \code{\link[HyperbolicDist]{dskewlap}} and
+  \code{\link[GeneralizedHyperbolic]{dskewlap}} and
   \code{\link{vgFitStart}}.
 
 }

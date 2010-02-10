@@ -41,7 +41,7 @@
   \code{vgCheckPars} to see if they are valid for the VG distribution.
 
   \code{order} is also checked by calling the function
-  \code{is.wholenumber} in \code{HyperbolicDist} package to see whether
+  \code{is.wholenumber} in \code{DistributionUtils} package to see whether
   a whole number is given.
 
   \code{momType} can be either "raw" (moments about zero), "mu"
@@ -57,7 +57,7 @@
   calculates mu moments by the formula defined below and then transforms mu
   moments to central moments or raw moments or moments about any other
   location as required by calling \code{momChangeAbout} in
-  \code{HyperbolicDist} package.
+  \code{DistributionUtils} package.
 
   To calculate mu moments of the variance gamma distribution, the function
   first transforms the parameterization of
@@ -79,14 +79,14 @@
 
   where \eqn{k = \code{order}}{k = order} and \eqn{k > 0}{k > 0} and
   \eqn{a_{k, \ell}}{a_{k, l}} is the recursive coefficient
-  (see \code{\link[HyperbolicDist]{momRecursion}} for details).
+  (see \code{\link[GeneralizedHyperbolic]{momRecursion}} for details).
 
   This formula is developed from the mu moments formula of the
   generalized hyperbolic distribution given in Scott,
   \enc{Würtz}{Wuertz} and Tran (2008).  Note that the part in \code{[]}
   of this equation is actually equivalent to the formula of raw moments
   of the gamma distribution. So the function calls \code{gammaRawMom} in
-  \code{HyperbolicDist} package when implementing the computations.
+  \code{GeneralizedHyperbolic} package when implementing the computations.
 }
 
 \value{
@@ -108,10 +108,10 @@
 \seealso{\code{\link{vgCheckPars}}, \code{\link{vgChangePars}},
   \code{\link{vgMean}},
   \code{\link{vgVar}}, \code{\link{vgSkew}}, \code{\link{vgKurt}},
-  \code{\link[HyperbolicDist]{is.wholenumber}},
-  \code{\link[HyperbolicDist]{momRecursion}},
-  \code{\link[HyperbolicDist]{momChangeAbout}} and
-  \code{\link[HyperbolicDist]{momIntegrated}}.}
+  \code{\link[DistributionUtils]{is.wholenumber}},
+  \code{\link[GeneralizedHyperbolic]{momRecursion}},
+  \code{\link[DistributionUtils]{momChangeAbout}} and
+  \code{\link[DistributionUtils]{momIntegrated}}.}
 
 
 \examples{

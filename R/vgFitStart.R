@@ -45,7 +45,7 @@ vgFitStart <- function (x, breaks = NULL, startValues = "SL",
     if (startValues == "SL") {
         svName <- "Skew Laplace"
         llsklp <- function(param) {
-            -sum(log(dskewlap(x, param, logPars = TRUE)))
+            -sum(log(dskewlap(x, param = param, logPars = TRUE)))
         }
         lSkewAlpha <- log(1/leftAsymptote[2])
         lSkewBeta <- log(abs(1/rightAsymptote[2]))
@@ -58,9 +58,9 @@ vgFitStart <- function (x, breaks = NULL, startValues = "SL",
         delta <- 0.1
         mu <- skewlpOptim$par[3]
         hyperbAlpha <- hyperbChangePars(3, 2,
-                                        c(phi, hyperbGamma, delta, mu))[1]
+                                        c(mu, delta, phi, hyperbGamma))[1]
         hyperbBeta <- hyperbChangePars(3, 2,
-                                       c(phi, hyperbGamma, delta, mu))[2]
+                                       c(mu, delta, phi, hyperbGamma))[2]
         nu <- 1
         vgC <- mu
         squareSigma <- 2*(1/nu)/(hyperbAlpha^2 - hyperbBeta^2)

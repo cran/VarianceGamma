@@ -79,7 +79,7 @@
 
 
 \seealso{
-  \code{\link{dvg}}, \code{\link[HyperbolicDist]{dskewlap}},
+  \code{\link{dvg}}, \code{\link[GeneralizedHyperbolic]{dskewlap}},
   \code{\link{vgFit}}, \code{\link{hist}}, and
   \code{\link{optim}}.
 }
