@@ -1,6 +1,6 @@
 Package: VarianceGamma
-Version: 0.4-0
-Date: 2018-11-26
+Version: 0.4-2
+Date: 2023-11-26
 Title: The Variance Gamma Distribution
 Author: David Scott <d.scott@auckland.ac.nz> and
         Christine Yang Dong <c.dong@auckland.ac.nz>
@@ -9,7 +9,7 @@ Depends: R (>= 3.0.1),
 Imports: grDevices, graphics, stats, DistributionUtils,
         GeneralizedHyperbolic
 Suggests: RUnit
-Encoding: latin1
+Encoding: UTF-8
 Description: Provides functions for the variance gamma
         distribution. Density, distribution and quantile functions.
         Functions for random number generation and fitting of the
@@ -20,6 +20,6 @@ Description: Provides functions for the variance gamma
         parameterizations for the variance gamma distribution.
 License: GPL (>= 2)
 NeedsCompilation: no
-Packaged: 2018-11-26 10:49:51 UTC; dsco036
+Packaged: 2023-11-25 21:57:33 UTC; dsco036
 Repository: CRAN
-Date/Publication: 2018-11-26 11:50:04 UTC
+Date/Publication: 2023-11-25 23:10:02 UTC

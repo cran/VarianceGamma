@@ -1,3 +1,8 @@
+Need to fix vgChangePars help:
+  et al not etal
+  give actual distributions and page numbers to parameterisations 2 and 3
+  also newline for the references
+
 Need to redo unit tests to match style of other packages
 
 Need to replace pvg and qvg
